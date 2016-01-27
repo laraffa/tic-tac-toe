@@ -15,11 +15,10 @@ function TicTacBoard(a1,a2,a3,b1,b2,b3,c1,c2,c3) {
   this.c1 = c1;
   this.c2 = c2;
   this.c3 = c3;
+
+  this.boardArray = [this.a1,this.a2,this.a3,this.b1,this.b2,this.b3,this.c1,this.c2,this.c3];
 }
 
-TicTacBoard.prototype.boardArray = function() {
-return [this.a1,this.a2,this.a3,this.b1,this.b2,this.b3,this.c1,this.c2,this.c3];
-}
 
 // var myBoard = new TicTacBoard(1,1,1,0,0,0,0,0,0);
 
@@ -76,14 +75,23 @@ TicTacBoard.prototype.gameWon = function() {
 }
 
 
-
-TicTacBoard.prototype.a1x = function() {
-  if (this.a1 === 0) {
-    this.a1 = 1
-  } else {
-    return "square not empty"
+TicTacBoard.prototype.gameTied = function() {
+  for(var i = 0; i < 9; i++) {
+    if (this.boardArray[i] === 0) {
+      return "keep playing";
+    }
   }
-}
+  return "game is tied";
+};
+
+
+// TicTacBoard.prototype.a1x = function() {
+//   if (this.a1 === 0) {
+//     this.a1 = 1
+//   } else {
+//     return "square not empty"
+//   }
+// }
 //
 // TicTacBoard.prototype.a1o = function() {
 //   this.a1 = -1

@@ -64,9 +64,13 @@ describe('Player 2 Wins', function() {
   });
 });
 
-// describe('GameTied', function() {
-//   it("is true that there are still empty squares", function() {
-//     var testBoard = new TicTacBoard(1,1,-1,1,-1,-1,0,1,-1);
-//     expect(GameLogic).to.equal("game continues")
-//   });
-// });
+describe('Game Tied', function() {
+  it("is true that there are still empty squares", function() {
+    var testBoard = new TicTacBoard(1,1,-1,1,0,-1,-1,1,1);
+    expect(testBoard.gameTied()).to.equal("keep playing")
+  });
+  it("is true that the game is tied", function() {
+    var testBoard = new TicTacBoard(1,1,-1,1,-1,-1,-1,1,1);
+    expect(testBoard.gameTied()).to.equal("game is tied")
+  });
+});
