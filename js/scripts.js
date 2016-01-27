@@ -4,18 +4,14 @@ function Player(playerName,mark,isTurn) {
   this.isTurn = isTurn;
 }
 
-//
-// function TicTacBoard() {
-//   var a1 = 0;
-//   var a2 = 0;
-//   var a3 = 0;
-// }
-//
-//
-//
-//
-//
-//
+
+function TicTacBoard(a1,a2,a3) {
+  this.a1 = a1;
+  this.a2 = a2;
+  this.a3 = a3;
+
+}
+
 //
 // TicTacBoard.prototype.a1x = function() {
 //   if (this.a1 === 0) {
