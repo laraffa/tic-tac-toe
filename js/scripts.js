@@ -24,40 +24,55 @@ return [this.a1,this.a2,this.a3,this.b1,this.b2,this.b3,this.c1,this.c2,this.c3]
 // var myBoard = new TicTacBoard(1,1,1,0,0,0,0,0,0);
 
 TicTacBoard.prototype.gameWon = function() {
-
   if (this.a1 + this.a2 + this.a3 === 3) {
     return "Player 1 Wins in the left column";
   }
-
   if (this.b1 + this.b2 + this.b3 === 3) {
     return "Player 1 Wins in the middle column";
   }
-
   if (this.c1 + this.c2 + this.c3 === 3) {
     return "Player 1 Wins in the right column";
   }
-
   if (this.a1 + this.b1 + this.c1 === 3) {
     return "Player 1 Wins in the bottom row";
   }
-
   if (this.a2 + this.b2 + this.c2 === 3) {
     return "Player 1 Wins in the middle row";
   }
-
   if (this.a3 + this.b3 + this.c3 === 3) {
     return "Player 1 Wins in the top row";
   }
-
   if (this.a1 + this.b2 + this.c3 === 3) {
     return "Player 1 Wins upward diagonal";
   }
-
   if (this.a3 + this.b2 + this.c1 === 3) {
     return "Player 1 Wins downward diagonal";
   }
-
-
+//End of Player One winning search
+  if (this.a1 + this.a2 + this.a3 === -3) {
+    return "Player 2 Wins in the left column";
+  }
+  if (this.b1 + this.b2 + this.b3 === -3) {
+    return "Player 2 Wins in the middle column";
+  }
+  if (this.c1 + this.c2 + this.c3 === -3) {
+    return "Player 2 Wins in the right column";
+  }
+  if (this.a1 + this.b1 + this.c1 === -3) {
+    return "Player 2 Wins in the bottom row";
+  }
+  if (this.a2 + this.b2 + this.c2 === -3) {
+    return "Player 2 Wins in the middle row";
+  }
+  if (this.a3 + this.b3 + this.c3 === -3) {
+    return "Player 2 Wins in the top row";
+  }
+  if (this.a1 + this.b2 + this.c3 === -3) {
+    return "Player 2 Wins upward diagonal";
+  }
+  if (this.a3 + this.b2 + this.c1 === -3) {
+    return "Player 2 Wins downward diagonal";
+  }
 }
 
 
