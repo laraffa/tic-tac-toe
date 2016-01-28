@@ -1,0 +1,10 @@
+.container {
+  text-align: center;
+}
+
+.game-square {
+  color: red;
+  height: 300px;
+  border: solid black;
+  font-size: 13em;
+}
