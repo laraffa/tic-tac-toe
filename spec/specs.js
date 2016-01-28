@@ -74,3 +74,13 @@ describe('Game Tied', function() {
     expect(testBoard.gameTied()).to.equal("game is tied")
   });
 });
+
+
+describe('Square Marking', function() {
+  it("marks the empty square with an x", function() {
+    var testBoard = new TicTacBoard(0,0,0,0,0,0,0,0,0);
+    var testPlayer = new Player("Lindsey",'x',true);
+    debugger;
+    expect(testBoard.a1mark()).to.equal("Lindsey has marked a square")
+  })
+})
